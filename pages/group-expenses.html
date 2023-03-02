@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Meus gastos</title>
+    <link rel="stylesheet" href="../css/index.css" />
+    <link rel="stylesheet" href="../FormModal/index.css" />
+    <link rel="stylesheet" href="../css/group-expenses.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap"
+      rel="stylesheet" />
+  </head>
+
+  <body>
+    <div class="header">
+      <h1>Despesas em grupo</h1>
+      <a class="navegation" href="../index.html">Despesas Individuais</a>
+      <button id="open-modal-button">Adicionar despesa em grupo</button>
+
+      <!-- The Modal -->
+      <div id="form-modal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+          <div class="modal-header">
+            <h3>Nova despesa em grupo</h3>
+            <img src="/images/close.svg" alt="Fechar modal" onclick="closeModal()" />
+          </div>
+
+          <div class="input-wrapper">
+            <label for="description"><b>Título</b></label>
+            <input type="text" placeholder="Escreva o titulo" name="title" id="title-input" required />
+          </div>
+          <div class="input-wrapper">
+            <label for="value"><b>Numero de participantes</b></label>
+            <input type="number" placeholder="3" name="participants" id="participants-input" required />
+          </div>
+          <div class="input-wrapper">
+            <label for="value"><b>Valor total da despesa</b></label>
+            <input type="number" placeholder="100" name="total" id="total-input" required />
+          </div>
+
+          <button type="submit" onclick="addGroupExpense()" id="add-new-group-expense-button"
+            class="add-new-group-expense-button">
+            Adicionar
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="group-expenses">
+      <div class="expense">
+        <h4>Despesa:</h4>
+        <ul class="title" id="title">
+        </ul>
+      </div>
+      <div class="parcial-value" id="parcial-value">
+        <h4>Valor parcial:</h4>
+      </div>
+      <div class="total-value" id="total-value">
+        <h4>Valor total:</h4>
+      </div>
+    </div>
+    <script src="../js/group-expenses/index.js"></script>
+    <script src="../js/group-expenses/Modal/index.js"></script>
+  </body>
+</html>

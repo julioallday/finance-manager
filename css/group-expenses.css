@@ -1,0 +1,35 @@
+.group-expenses {
+    display: flex;
+    gap: clamp(1rem, 7vw + 2rem, 19rem);
+    color: aliceblue;
+    min-width: 16rem;
+    background-color: #1a1c22;
+    margin: 20px auto;
+    padding: min(2rem) min(4rem) ;
+    border-radius: 16px;
+  }
+
+  h4 {
+    margin: 10px;
+  }
+
+  .title-item,
+  .parcial-value,
+  .total-value {
+    font-weight: 200;
+  }
+  .add-new-group-expense-button {
+    background-color: #04aa6d;
+    color: white;
+    padding: 16px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 1;
+  }
+  
+  .add-new-group-expense-button:hover {
+    opacity: 0.85;
+  }
+  
